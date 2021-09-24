@@ -87,10 +87,10 @@ std::string RSA::to_chars(reverse::Bignum to_numeric) noexcept {
     return nlas;
 }
 
-std::string RSA::handle_bignum(int argc, char** argv) {
+std::string RSA::handle_bignum(int argc, std::vector<std::string> argv) {  // char** argv) {
     std::ios_base::sync_with_stdio(false);
 
-    if (argc != 4 && (argc != 6 || (*argv[1] != 'e' && *argv[1] != 'd')) && (argc != 5 || (*argv[1] != '^'))) {
+    if (argc != 4 && (argc != 6 || (argv[1] != "e" && argv[1] != "d")) && (argc != 5 || (argv[1] != "^"))) {
         return "Run as bignum -op number1 number2, or bignum -help, where:\n	op is one of + - * / %% gcd encrypt decrypt\n	number1 and number2 are positive integers of arbitrary length\n\n";
     }
 
@@ -251,7 +251,15 @@ std::string RSA::rsa_encrypt(std::string receiver_public_key, std::string messag
     // receiver_public_key can be either own or other's public key
 
     // build off of bignum input handler
-    std::string* argv = [ "bignum", "e", receiver_public_key, rsa_e, rsa_d, message ];
+    std::vector<std::string> argv;
+    argv.emplace_back("bignum");
+    argv.emplace_back("e");
+    argv.emplace_back(receiver_public_key);
+    argv.emplace_back(rsa_e);
+    argv.emplace_back(rsa_d);
+    argv.emplace_back(message);
+
+    // std::string* argv = [ "bignum", "e", receiver_public_key, rsa_e, rsa_d, message ];
     int argc = 6;
 
     std::string res = handle_bignum(argc, argv);
@@ -260,7 +268,15 @@ std::string RSA::rsa_encrypt(std::string receiver_public_key, std::string messag
 
 std::string RSA::rsa_decrypt(std::string message) {
     // build off of bignum input handler
-    std::string* argv = [ "bignum", "d", receiver_public_key, rsa_e, rsa_d, message ];
+    std::vector<std::string> argv;
+    argv.emplace_back("bignum");
+    argv.emplace_back("d");
+    argv.emplace_back(rsa_n);
+    argv.emplace_back(rsa_e);
+    argv.emplace_back(rsa_d);
+    argv.emplace_back(message);
+
+    // std::string* argv = [ "bignum", "d", receiver_public_key, rsa_e, rsa_d, message ];
     int argc = 6;
 
     std::string res = handle_bignum(argc, argv);

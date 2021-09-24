@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "bignum.h"
 
@@ -34,7 +35,7 @@ private:
 
     std::string to_chars(reverse::Bignum to_numeric) noexcept;
 
-    int handle_bignum(int argc, char** argv);
+    std::string handle_bignum(int argc, std::vector<std::string> argv);  //char** argv);
 
 public:
     RSA(int keyBits = 2048);

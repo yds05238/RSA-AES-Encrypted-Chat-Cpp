@@ -1,0 +1,2 @@
+/usr/bin/ar qc libchatSocket.a  CMakeFiles/chatSocket.dir/src/chatNode.cpp.o CMakeFiles/chatSocket.dir/src/chatServer.cpp.o CMakeFiles/chatSocket.dir/src/chatClient.cpp.o
+/usr/bin/ranlib libchatSocket.a

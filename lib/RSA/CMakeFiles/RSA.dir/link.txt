@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRSA.a  CMakeFiles/RSA.dir/src/bignum.cpp.o CMakeFiles/RSA.dir/src/normal_bignum.cpp.o CMakeFiles/RSA.dir/src/RSA.cpp.o
+/usr/bin/ranlib libRSA.a

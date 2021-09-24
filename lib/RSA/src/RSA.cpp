@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <cstring>
+
 // Helper function to read key from pem key file
 const std::string readPemFile(const std::filesystem::path& fpath) {
     // read file lines
@@ -39,7 +41,11 @@ void RSA::rsa_keys_generate() {
     // generate keys
     std::string scriptcall = "./generate_keys.sh ";
     scriptcall += std::to_string(keyBits);
-    system(scriptcall);
+    char script_call[scriptcall.length() + 1];
+    strcpy(script_call, scriptcall.c_str());
+
+    // system(scriptcall);
+    system(script_call);
 
     // read keys
     // Public Pem file
@@ -53,10 +59,13 @@ void RSA::rsa_keys_generate() {
     system("./cleanup_keys.sh");
 }
 
-const bool RSA::is_digit(const char value) noexcept { return std::isdigit(value); }
-const bool RSA::is_numeric(const std::string& value) noexcept { return std::all_of(value.begin(), value.end(), is_digit); }
+// const bool RSA::is_digit(const char value) noexcept { return std::isdigit(value); }
+const bool is_digit(const char value) noexcept { return std::isdigit(value); }
 
-std::string RSA::to_numeric(std::string next_line) noexcept {
+const bool is_numeric(const std::string& value) noexcept { return std::all_of(value.begin(), value.end(), is_digit); }
+
+// std::string RSA::to_numeric(std::string next_line) noexcept {
+std::string to_numeric(std::string next_line) noexcept {
     std::string nlad("");
     for (const char c : next_line) {
         const int d = ((int)c & 0xFF);
@@ -67,7 +76,8 @@ std::string RSA::to_numeric(std::string next_line) noexcept {
     return nlad;
 }
 
-std::string RSA::to_chars(reverse::Bignum to_numeric) noexcept {
+// std::string RSA::to_chars(reverse::Bignum to_numeric) noexcept {
+std::string to_chars(reverse::Bignum to_numeric) noexcept {
     to_numeric.changeToBase10();
     std::string nlas("");
     auto d_to_go = to_numeric.num_digits() % 3;
@@ -239,7 +249,16 @@ std::string RSA::handle_bignum(int argc, std::vector<std::string> argv) {  // ch
     }
 }
 
-RSA::RSA(int keyBits = 2048) : keyBits(keyBits) {
+// RSA::RSA(int keyBits = 2048) : keyBits(keyBits) {
+//     rsa_keys_generate();
+// }
+
+RSA::RSA() {
+    keyBits = 2048;
+    rsa_keys_generate();
+}
+
+RSA::RSA(int keyBits) : keyBits(keyBits) {
     rsa_keys_generate();
 }
 

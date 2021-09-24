@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/RSA/src/RSA.cpp
+RSA.h
+/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/RSA/src/RSA.h
+stdio.h
+-
+stdlib.h
+-
+cstring
+-
+
+lib/RSA/include/RSA.h
+filesystem
+-
+fstream
+-
+iostream
+-
+string
+-
+vector
+-
+bignum.h
+lib/RSA/include/bignum.h
+
+lib/RSA/include/bignum.h
+algorithm
+-
+iostream
+-
+string
+-
+vector
+-
+

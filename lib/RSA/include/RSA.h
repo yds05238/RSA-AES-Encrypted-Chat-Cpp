@@ -27,18 +27,21 @@ private:
 
     void rsa_keys_generate();
 
-    const bool is_digit(const char value) noexcept;
+    // const bool is_digit(const char value) noexcept;
 
-    const bool is_numeric(const std::string& value) noexcept;
+    // const bool is_numeric(const std::string& value) noexcept;
 
-    std::string to_numeric(std::string next_line) noexcept;
+    // std::string to_numeric(std::string next_line) noexcept;
 
-    std::string to_chars(reverse::Bignum to_numeric) noexcept;
+    // std::string to_chars(reverse::Bignum to_numeric) noexcept;
 
     std::string handle_bignum(int argc, std::vector<std::string> argv);  //char** argv);
 
 public:
-    RSA(int keyBits = 2048);
+    // RSA(int keyBits = 2048);
+    RSA();
+
+    RSA(int keyBits);
 
     const std::string get_public_key() noexcept;  // get rsa_n
 

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/Chat/encryptedChatClient.cpp
+csignal
+-
+iostream
+-
+limits
+-
+chatClient.h
+/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/Chat/chatClient.h
+
+lib/chatSocket/include/chatClient.h
+functional
+-
+iostream
+-
+mutex
+-
+thread
+-
+chatNode.h
+lib/chatSocket/include/chatNode.h
+
+lib/chatSocket/include/chatNode.h
+cstring
+-
+stdexcept
+-
+winsock2.h
+-
+ws2tcpip.h
+-
+arpa/inet.h
+-
+netinet/in.h
+-
+unistd.h
+-
+

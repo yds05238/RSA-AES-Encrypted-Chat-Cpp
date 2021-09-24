@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/AES/src/AES.cpp
+AES.h
+/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/AES/src/AES.h
+
+lib/AES/include/AES.h
+cstring
+-
+iostream
+-
+stdio.h
+-
+

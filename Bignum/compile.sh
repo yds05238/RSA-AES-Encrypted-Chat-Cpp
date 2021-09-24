@@ -1,0 +1,1 @@
+g++ -Ofast -Wall -Wpedantic -std=c++17 -march=native -funroll-loops -flto -pipe main.cpp bignum.cpp normal_bignum.cpp -o bignum

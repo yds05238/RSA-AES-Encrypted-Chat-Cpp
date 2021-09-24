@@ -1,0 +1,8 @@
+Fast Bignum program that takes in rsa_n, rsa_e, rsa_d as arguments 
+
+Remove 51 character limit on encrypt/decrypt
+
+
+# scripts
+
+time bignum e < one-liners | bignum d 

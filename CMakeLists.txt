@@ -14,14 +14,22 @@ project(encryptedChat)
 add_subdirectory(lib/AES)
 include_directories(lib/AES/include)
 
+# RSA library
+add_subdirectory(lib/RSA)
+include_directories(lib/RSA/include)
+
+# chatSocket library
+add_subdirectory(lib/chatSocket)
+include_directories(lib/chatSocket/include)
+
 # create encryptedChatServer
 add_executable(encryptedChatServer Chat/encryptedChatServer.cpp)
 # create encryptedChatClient
 add_executable(encryptedChatClient Chat/encryptedChatClient.cpp)
 
 # link library
-target_link_libraries(encryptedChatServer AES)
-target_link_libraries(encryptedChatClient AES)
+target_link_libraries(encryptedChatServer AES RSA chatSocket)
+target_link_libraries(encryptedChatClient AES RSA chatSocket)
 
 # install
 install(TARGETS encryptedChatServer DESTINATION bin)

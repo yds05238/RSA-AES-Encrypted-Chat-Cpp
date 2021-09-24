@@ -221,59 +221,59 @@ chatSocket/fast:
 	$(MAKE) -f lib/chatSocket/CMakeFiles/chatSocket.dir/build.make lib/chatSocket/CMakeFiles/chatSocket.dir/build
 .PHONY : chatSocket/fast
 
-Chat/encryptedChatClient.o: Chat/encryptedChatClient.cpp.o
+example/chat_client.o: example/chat_client.cpp.o
 
-.PHONY : Chat/encryptedChatClient.o
-
-# target to build an object file
-Chat/encryptedChatClient.cpp.o:
-	$(MAKE) -f CMakeFiles/encryptedChatClient.dir/build.make CMakeFiles/encryptedChatClient.dir/Chat/encryptedChatClient.cpp.o
-.PHONY : Chat/encryptedChatClient.cpp.o
-
-Chat/encryptedChatClient.i: Chat/encryptedChatClient.cpp.i
-
-.PHONY : Chat/encryptedChatClient.i
-
-# target to preprocess a source file
-Chat/encryptedChatClient.cpp.i:
-	$(MAKE) -f CMakeFiles/encryptedChatClient.dir/build.make CMakeFiles/encryptedChatClient.dir/Chat/encryptedChatClient.cpp.i
-.PHONY : Chat/encryptedChatClient.cpp.i
-
-Chat/encryptedChatClient.s: Chat/encryptedChatClient.cpp.s
-
-.PHONY : Chat/encryptedChatClient.s
-
-# target to generate assembly for a file
-Chat/encryptedChatClient.cpp.s:
-	$(MAKE) -f CMakeFiles/encryptedChatClient.dir/build.make CMakeFiles/encryptedChatClient.dir/Chat/encryptedChatClient.cpp.s
-.PHONY : Chat/encryptedChatClient.cpp.s
-
-Chat/encryptedChatServer.o: Chat/encryptedChatServer.cpp.o
-
-.PHONY : Chat/encryptedChatServer.o
+.PHONY : example/chat_client.o
 
 # target to build an object file
-Chat/encryptedChatServer.cpp.o:
-	$(MAKE) -f CMakeFiles/encryptedChatServer.dir/build.make CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o
-.PHONY : Chat/encryptedChatServer.cpp.o
+example/chat_client.cpp.o:
+	$(MAKE) -f CMakeFiles/encryptedChatClient.dir/build.make CMakeFiles/encryptedChatClient.dir/example/chat_client.cpp.o
+.PHONY : example/chat_client.cpp.o
 
-Chat/encryptedChatServer.i: Chat/encryptedChatServer.cpp.i
+example/chat_client.i: example/chat_client.cpp.i
 
-.PHONY : Chat/encryptedChatServer.i
+.PHONY : example/chat_client.i
 
 # target to preprocess a source file
-Chat/encryptedChatServer.cpp.i:
-	$(MAKE) -f CMakeFiles/encryptedChatServer.dir/build.make CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.i
-.PHONY : Chat/encryptedChatServer.cpp.i
+example/chat_client.cpp.i:
+	$(MAKE) -f CMakeFiles/encryptedChatClient.dir/build.make CMakeFiles/encryptedChatClient.dir/example/chat_client.cpp.i
+.PHONY : example/chat_client.cpp.i
 
-Chat/encryptedChatServer.s: Chat/encryptedChatServer.cpp.s
+example/chat_client.s: example/chat_client.cpp.s
 
-.PHONY : Chat/encryptedChatServer.s
+.PHONY : example/chat_client.s
 
 # target to generate assembly for a file
-Chat/encryptedChatServer.cpp.s:
-	$(MAKE) -f CMakeFiles/encryptedChatServer.dir/build.make CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.s
-.PHONY : Chat/encryptedChatServer.cpp.s
+example/chat_client.cpp.s:
+	$(MAKE) -f CMakeFiles/encryptedChatClient.dir/build.make CMakeFiles/encryptedChatClient.dir/example/chat_client.cpp.s
+.PHONY : example/chat_client.cpp.s
+
+example/chat_server.o: example/chat_server.cpp.o
+
+.PHONY : example/chat_server.o
+
+# target to build an object file
+example/chat_server.cpp.o:
+	$(MAKE) -f CMakeFiles/encryptedChatServer.dir/build.make CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o
+.PHONY : example/chat_server.cpp.o
+
+example/chat_server.i: example/chat_server.cpp.i
+
+.PHONY : example/chat_server.i
+
+# target to preprocess a source file
+example/chat_server.cpp.i:
+	$(MAKE) -f CMakeFiles/encryptedChatServer.dir/build.make CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.i
+.PHONY : example/chat_server.cpp.i
+
+example/chat_server.s: example/chat_server.cpp.s
+
+.PHONY : example/chat_server.s
+
+# target to generate assembly for a file
+example/chat_server.cpp.s:
+	$(MAKE) -f CMakeFiles/encryptedChatServer.dir/build.make CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.s
+.PHONY : example/chat_server.cpp.s
 
 # Help Target
 help:
@@ -292,12 +292,12 @@ help:
 	@echo "... AES"
 	@echo "... RSA"
 	@echo "... chatSocket"
-	@echo "... Chat/encryptedChatClient.o"
-	@echo "... Chat/encryptedChatClient.i"
-	@echo "... Chat/encryptedChatClient.s"
-	@echo "... Chat/encryptedChatServer.o"
-	@echo "... Chat/encryptedChatServer.i"
-	@echo "... Chat/encryptedChatServer.s"
+	@echo "... example/chat_client.o"
+	@echo "... example/chat_client.i"
+	@echo "... example/chat_client.s"
+	@echo "... example/chat_server.o"
+	@echo "... example/chat_server.i"
+	@echo "... example/chat_server.s"
 .PHONY : help
 
 

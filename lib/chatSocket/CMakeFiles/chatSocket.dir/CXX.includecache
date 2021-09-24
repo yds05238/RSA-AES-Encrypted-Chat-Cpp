@@ -6,29 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/chatSocket/src/chatClient.cpp
-chatClient.h
-/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/chatSocket/src/chatClient.h
-
 /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/chatSocket/src/chatNode.cpp
 chatNode.h
 /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/chatSocket/src/chatNode.h
-
-/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/chatSocket/src/chatServer.cpp
-chatServer.h
-/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/lib/chatSocket/src/chatServer.h
-
-lib/chatSocket/include/chatClient.h
-functional
--
-iostream
--
-mutex
--
-thread
--
-chatNode.h
-lib/chatSocket/include/chatNode.h
 
 lib/chatSocket/include/chatNode.h
 cstring
@@ -45,18 +25,4 @@ netinet/in.h
 -
 unistd.h
 -
-
-lib/chatSocket/include/chatServer.h
-algorithm
--
-functional
--
-mutex
--
-thread
--
-vector
--
-chatNode.h
-lib/chatSocket/include/chatNode.h
 

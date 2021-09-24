@@ -34,15 +34,33 @@ const std::string readPemFile(const std::filesystem::path& fpath) {
         }
     }
 
-    return keyStr;
+    // return keyStr;
+
+    std::string nlad("");
+    for (const char c : keyStr) {
+        const int d = ((int)c & 0xFF);
+        nlad += (d / 100) % 10 + '0';
+        nlad += (d / 10) % 10 + '0';
+        nlad += d % 10 + '0';
+    }
+
+    std::cout << "key: " << keyStr << '\n'
+              << '\n';
+    std::cout << "10key: " << nlad << '\n'
+              << '\n';
+
+    return nlad;
 }
 
 void RSA::rsa_keys_generate() {
     // generate keys
-    std::string scriptcall = "./generate_keys.sh ";
+    std::string scriptcall = std::string(std::filesystem::current_path());
+    scriptcall += "/generate_keys.sh ";
     scriptcall += std::to_string(keyBits);
     char script_call[scriptcall.length() + 1];
     strcpy(script_call, scriptcall.c_str());
+
+    std::cout << scriptcall << '\n';
 
     // system(scriptcall);
     system(script_call);
@@ -56,7 +74,14 @@ void RSA::rsa_keys_generate() {
     rsa_d = readPemFile(fpath2);
 
     // clean up key files
-    system("./cleanup_keys.sh");
+    // system("./cleanup_keys.sh");
+    std::string scriptcall2 = std::string(std::filesystem::current_path());
+    scriptcall2 += "/lib/RSA/src/cleanup_keys.sh";
+    char script_call2[scriptcall2.length() + 1];
+    strcpy(script_call2, scriptcall2.c_str());
+
+    // system("cleanup_keys.sh");
+    system(script_call2);
 }
 
 // const bool RSA::is_digit(const char value) noexcept { return std::isdigit(value); }

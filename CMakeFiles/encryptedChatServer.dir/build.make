@@ -57,27 +57,27 @@ include CMakeFiles/encryptedChatServer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/encryptedChatServer.dir/flags.make
 
-CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o: CMakeFiles/encryptedChatServer.dir/flags.make
-CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o: Chat/encryptedChatServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o -c /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/Chat/encryptedChatServer.cpp
+CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o: CMakeFiles/encryptedChatServer.dir/flags.make
+CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o: example/chat_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o -c /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/example/chat_server.cpp
 
-CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/Chat/encryptedChatServer.cpp > CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.i
+CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/example/chat_server.cpp > CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.i
 
-CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/Chat/encryptedChatServer.cpp -o CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.s
+CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/example/chat_server.cpp -o CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.s
 
 # Object files for target encryptedChatServer
 encryptedChatServer_OBJECTS = \
-"CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o"
+"CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o"
 
 # External object files for target encryptedChatServer
 encryptedChatServer_EXTERNAL_OBJECTS =
 
-encryptedChatServer: CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o
+encryptedChatServer: CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o
 encryptedChatServer: CMakeFiles/encryptedChatServer.dir/build.make
 encryptedChatServer: lib/AES/libAES.a
 encryptedChatServer: lib/RSA/libRSA.a

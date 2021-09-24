@@ -23,13 +23,13 @@ add_subdirectory(lib/chatSocket)
 include_directories(lib/chatSocket/include)
 
 # create encryptedChatServer
-add_executable(encryptedChatServer Chat/encryptedChatServer.cpp)
+add_executable(encryptedChatServer example/chat_server.cpp)
 # create encryptedChatClient
-add_executable(encryptedChatClient Chat/encryptedChatClient.cpp)
+add_executable(encryptedChatClient example/chat_client.cpp)
 
 # link library
-target_link_libraries(encryptedChatServer AES RSA chatSocket)
-target_link_libraries(encryptedChatClient AES RSA chatSocket)
+target_link_libraries(encryptedChatServer AES RSA chatSocket boost_system boost_thread pthread)
+target_link_libraries(encryptedChatClient AES RSA chatSocket boost_system boost_thread pthread)
 
 # install
 install(TARGETS encryptedChatServer DESTINATION bin)

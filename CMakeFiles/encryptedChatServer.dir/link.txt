@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o  -o encryptedChatServer  lib/AES/libAES.a lib/RSA/libRSA.a lib/chatSocket/libchatSocket.a -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o  -o encryptedChatServer  lib/AES/libAES.a lib/RSA/libRSA.a lib/chatSocket/libchatSocket.a -lboost_system -lboost_thread -lpthread 

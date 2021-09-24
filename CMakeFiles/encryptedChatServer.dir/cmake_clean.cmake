@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/encryptedChatServer.dir/Chat/encryptedChatServer.cpp.o"
+  "CMakeFiles/encryptedChatServer.dir/example/chat_server.cpp.o"
   "encryptedChatServer"
   "encryptedChatServer.pdb"
 )

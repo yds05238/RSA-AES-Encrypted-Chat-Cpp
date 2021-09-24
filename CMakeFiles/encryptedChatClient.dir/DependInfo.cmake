@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/Chat/encryptedChatClient.cpp" "/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/CMakeFiles/encryptedChatClient.dir/Chat/encryptedChatClient.cpp.o"
+  "/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/example/chat_client.cpp" "/home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/CMakeFiles/encryptedChatClient.dir/example/chat_client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

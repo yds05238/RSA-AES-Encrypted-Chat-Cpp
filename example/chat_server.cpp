@@ -19,8 +19,8 @@
 
 // #include "protocol.hpp"
 enum : unsigned {
-    MAX_IP_PACK_SIZE = 512,
-    MAX_NICKNAME = 16,
+    MAX_IP_PACK_SIZE = 4096,
+    MAX_NICKNAME = 2066,
     PADDING = 24
 };
 
@@ -111,6 +111,7 @@ private:
     enum { max_recent_msgs = 100 };
     std::unordered_set<std::shared_ptr<participant>> participants_;
     std::unordered_map<std::shared_ptr<participant>, std::string> name_table_;
+    std::unordered_map<std::shared_ptr<participant>, std::string> key_table_;  // participant public keys
     std::deque<std::array<char, MAX_IP_PACK_SIZE>> recent_msgs_;
 };
 

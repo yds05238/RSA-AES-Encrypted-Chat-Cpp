@@ -5,12 +5,21 @@
 #include <cstring>
 #include <deque>
 #include <iostream>
+#include <string>
 #include <thread>
 
+#include "RSA.h"
+
 // #include "protocol.hpp"
+// enum : unsigned {
+//     MAX_IP_PACK_SIZE = 512,
+//     MAX_NICKNAME = 16,
+//     PADDING = 24
+// };
+
 enum : unsigned {
-    MAX_IP_PACK_SIZE = 512,
-    MAX_NICKNAME = 16,
+    MAX_IP_PACK_SIZE = 4096,
+    MAX_NICKNAME = 2066,
     PADDING = 24
 };
 
@@ -21,7 +30,14 @@ public:
     client(const std::array<char, MAX_NICKNAME>& nickname,
            boost::asio::io_service& io_service,
            tcp::resolver::iterator endpoint_iterator) : io_service_(io_service), socket_(io_service) {
-        strcpy(nickname_.data(), nickname.data());
+        // strcpy(nickname_.data(), nickname.data());
+        std::string newnickname = rsa_.get_public_key();
+        newnickname += " ";
+        std::string nickname2(std::begin(nickname), std::end(nickname));
+        newnickname += nickname2;
+        // strcpy(nickname_.data(), rsa_.get_public_key().c_str());
+        strcpy(nickname_.data(), newnickname.c_str());
+
         memset(read_msg_.data(), '\0', MAX_IP_PACK_SIZE);
         boost::asio::async_connect(socket_, endpoint_iterator, boost::bind(&client::onConnect, this, _1));
     }
@@ -37,13 +53,20 @@ public:
 private:
     void onConnect(const boost::system::error_code& error) {
         if (!error) {
+            // temp rsa
+
             boost::asio::async_write(socket_,
                                      boost::asio::buffer(nickname_, nickname_.size()),
                                      boost::bind(&client::readHandler, this, _1));
         }
     }
 
+    // void nicknameHandler(const boost::system::error_code& error) {
+
+    // }
+
     void readHandler(const boost::system::error_code& error) {
+        // aes decrypt...
         std::cout << read_msg_.data() << std::endl;
         if (!error) {
             boost::asio::async_read(socket_,
@@ -86,6 +109,9 @@ private:
     std::array<char, MAX_IP_PACK_SIZE> read_msg_;
     std::deque<std::array<char, MAX_IP_PACK_SIZE>> write_msgs_;
     std::array<char, MAX_NICKNAME> nickname_;
+    std::array<char, MAX_NICKNAME> publickey_;
+
+    RSA rsa_;
 };
 
 int main(int argc, char* argv[]) {

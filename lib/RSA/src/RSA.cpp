@@ -44,10 +44,10 @@ const std::string readPemFile(const std::filesystem::path& fpath) {
         nlad += d % 10 + '0';
     }
 
-    std::cout << "key: " << keyStr << '\n'
-              << '\n';
-    std::cout << "10key: " << nlad << '\n'
-              << '\n';
+    // std::cout << "key: " << keyStr << '\n'
+    //           << '\n';
+    // std::cout << "10key: " << nlad << '\n'
+    //           << '\n';
 
     return nlad;
 }
@@ -55,7 +55,7 @@ const std::string readPemFile(const std::filesystem::path& fpath) {
 void RSA::rsa_keys_generate() {
     // generate keys
     std::string scriptcall = std::string(std::filesystem::current_path());
-    scriptcall += "/generate_keys.sh ";
+    scriptcall += "/lib/RSA/src/generate_keys.sh ";
     scriptcall += std::to_string(keyBits);
     char script_call[scriptcall.length() + 1];
     strcpy(script_call, scriptcall.c_str());

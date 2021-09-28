@@ -3,3 +3,5 @@
 
 CMakeFiles/encryptedChatClient.dir/example/chat_client.cpp.o
  /home/temp/Desktop/Recruitment/RSA-AES-Encrypted-Chat-Cpp/example/chat_client.cpp
+ lib/RSA/include/RSA.h
+ lib/RSA/include/bignum.h
